@@ -4,8 +4,7 @@
     <div class="result-item" v-for="item in showList" :key="item.title">
       <a class="title">{{ item.title }}</a>
       <a :href="item.url" class="link">{{ item.url }}</a>
-      <div class="desc" v-html="item.desc"></div>
-      <div class="time">{{ item.date }}</div>
+      <div class="desc" v-html="item.date + ' - ' + item.desc"></div>
     </div>
     <div class="noData" v-show="isShow">
       没有符合条件的结果
@@ -67,10 +66,7 @@ export default {
     }
     .desc {
       word-break: break-all;
-    }
-    .time {
-      text-align: right;
-      color: map-get($map: $colors, $key: 'grey');
+      color: #333333;
     }
   }
 }
