@@ -1,18 +1,32 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="search-plane">
+      <my-search-logo class="my-search-logo" />
+      <search-bar class="search-input" />
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import MySearchLogo from '@/components/MySearchLogo'
+import SearchBar from '@/components/SearchBar'
 export default {
-  name: 'Home',
   components: {
-    HelloWorld
+    MySearchLogo,
+    SearchBar
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.search-plane {
+  text-align: center;
+  .my-search-logo {
+    margin-top: 120px;
+    margin-bottom: 50px;
+  }
+  .search-input {
+    margin: 0 auto;
+  }
+}
+</style>
